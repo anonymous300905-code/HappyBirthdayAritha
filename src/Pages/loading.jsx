@@ -3,7 +3,8 @@ import "./loading.css";
 import Home from "./home";
 import AboutPage from "./about";
 import Confessions from "./confessions";
-
+import Edits from "./edits";
+import { Footer } from "./footer";
 function Loading({ onLoadingComplete }) {
     const [showRemName, setShowRemName] = useState(false);
     const [typedText, setTypedText] = useState("");
@@ -71,6 +72,9 @@ function Loading({ onLoadingComplete }) {
                 <Home />
                 <AboutPage/>
                 <Confessions />
+
+                <Edits/>
+                <Footer />
                 </>
             )}
         </>

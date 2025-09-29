@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import about1 from '../assets/about1.png'
 import yt from '../assets/yt.png'
+import reel from '../assets/Screenshot_20250929_233531.jpg'
 
 const AboutPage = () => {
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -55,21 +56,21 @@ const AboutPage = () => {
     {
       id: 2,
       title: "Youtuber",
-      content: "We are dedicated to creating meaningful experiences that connect people and technology. Through collaboration, innovation, and a deep understanding of our clients' needs, we deliver solutions that make a lasting impact on businesses and communities.",
+      content: "She is a YouTuber who creates content on various topics, including technology and country-related themes. Her channel reflects her passion for sharing knowledge and insights.",
       image: yt,
       imagePosition: "right"
     },
     {
       id: 3,
       title: "Reels Maker",
-      content: "Excellence, integrity, and continuous learning form the foundation of everything we do. We believe in fostering an environment where creativity thrives, diverse perspectives are valued, and every team member can contribute to our shared success.",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      content: "She made one reel and now she’s officially a reel content creator.",
+      image: reel,
       imagePosition: "left"
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-800 px-4 py-8 md:py-12 min-h-screen">
+    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-800 px-4 py-8 md:py-12 min-h-screen" id='about'>
       {/* SVG Filters for Wavy Border Effects (Desktop Only) */}
       <svg className="absolute w-0 h-0">
         <defs>
@@ -88,7 +89,7 @@ const AboutPage = () => {
         </defs>
       </svg>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
         {/* Header with animation */}
         <div 
           ref={headerRef}
@@ -98,7 +99,7 @@ const AboutPage = () => {
               : 'opacity-0 translate-y-12'
           }`}
         >
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6 animate-pulse">
+          <h1 className="bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mb-6 font-bold text-transparent text-4xl md:text-6xl animate-pulse">
             About Her
           </h1>
         </div>
@@ -133,7 +134,7 @@ const AboutPage = () => {
                 } items-center p-4 md:p-6 lg:p-8 gap-6 md:gap-8`}
               >
                 {/* Image with animation */}
-                <div className="w-full md:w-1/2 flex-shrink-0">
+                <div className="flex-shrink-0 w-full md:w-1/2">
                   <div 
                     className={`relative overflow-hidden rounded-xl aspect-[5/3] group-hover:scale-105 transition-all duration-700 ${
                       cardVisibility[index] 
@@ -154,7 +155,7 @@ const AboutPage = () => {
                 </div>
 
                 {/* Content with animation */}
-                <div className="w-full md:w-1/2 space-y-6">
+                <div className="space-y-6 w-full md:w-1/2">
                   <h2 
                     className={`text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent transition-all duration-700 ${
                       cardVisibility[index] 

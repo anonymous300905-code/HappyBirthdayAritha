@@ -27,7 +27,9 @@ const Home = () => {
     const images = [image4, image3, image1];
 
     return (
-        <div className="flex justify-center items-center bg-gradient-to-br from-gray-900 via-black to-gray-800 px-4 py-8 md:py-12 h-[75vh]">
+        <div className="flex justify-center items-center bg-gradient-to-br from-gray-900 via-black to-gray-800 px-4 py-8 md:py-12 h-[75vh]"
+            id='home'
+        >
             {/* SVG Filters for Wavy Border Effects (Desktop Only) */}
             <svg className="absolute w-0 h-0">
                 <defs>
@@ -169,7 +171,9 @@ const Home = () => {
                         <div className={`transition-all duration-1000 delay-900 transform ${
                             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                         }`}>
-                            <p className="z-10 relative bg-black/20 backdrop-blur-sm px-4 sm:px-8 md:px-12 lg:px-0 py-8 rounded-xl font-medium text-gray-300 text-base lg:text-lg xl:text-xl text-center lg:text-justify lg:indent-8 leading-relaxed">
+                            <p className="z-10 relative bg-black/20 backdrop-blur-sm p-10 px-4 sm:px-8 md:px-12 lg:px-0 py-8 rounded-xl font-medium text-gray-300 text-base lg:text-lg xl:text-xl text-center lg:text-justify lg:indent-8 leading-relaxed"
+                                style={{padding : '10%'}}
+                            >
                                 A gurl who is deeply passionate about life and success. A drone enthusiast, future entrepreneur, and much more. She admires Smriti Mandhana, and perhaps loves cricket only because of her (though I'm not entirely sure). If she chose an topic for an competion to speak, it may be about Country or Technology there will be an reference for Smriti , that shows how much she admires her .She is also a YouTuber, a speaker, and so much more.
                             </p>
                         </div>
