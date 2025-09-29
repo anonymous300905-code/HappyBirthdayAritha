@@ -1,0 +1,172 @@
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.gap {
+    animation: 
+        gapTransform 2s ease-in-out forwards, 
+        expandCircle 1s ease-in-out 2s forwards,
+        textColorChange 0s ease-in-out 2s forwards;
+    position: relative;
+    z-index: 10;
+    transform-origin: center;
+}
+
+@keyframes gapTransform {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(clamp(8px, 1.5vw, 12px));
+    }
+}
+
+@keyframes textColorChange {
+    from {
+        color: inherit;
+    }
+    to {
+        color: white;
+    }
+}
+
+.loading {
+    font-size   : clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .loading-container {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loading-container {
+        padding: 0.5rem;
+    }
+    .loading {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes expandCircle {
+    0% {
+        background-color: white;
+        border-radius: 50%;
+        width: min(20px, 5vw);
+        height: min(20px, 5vw);
+        transform: translate(-50%, -50%) scale(1);
+        top: 50%;
+        left: 50%;
+        position: fixed;
+    }
+    100% {
+        color: white;
+        width: 100vmax;
+        height: 100vmax;
+        transform: translate(-50%, -50%) scale(2.5);
+        background-color: white;
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes expandCircle {
+        0% {
+            background-color: white;
+            border-radius: 50%;
+            width: min(16px, 4vw);
+            height: min(16px, 4vw);
+            transform: translate(-50%, -50%) scale(1);
+            top: 50%;
+            left: 50%;
+            position: fixed;
+        }
+        100% {
+            color: white !important;
+            width: 100vmax;
+            height: 100vmax;
+            transform: translate(-50%, -50%) scale(3);
+            background-color: white;
+            position: fixed;
+        }
+    }
+}
+
+
+.typing-effect {
+    display: block;
+    animation: typingEffect 1.5s ease forwards;
+}
+
+@keyframes typingEffect {
+    from {
+        width: 0;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.happy-birthday {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    opacity: 0;
+    animation: fadeInEase .5s ease-in-out forwards, fadeOutBirthday .5s ease-in-out 1.3s forwards;
+    font-family: "Arizonia", cursive;
+    scale: clamp(1.5, 2vw, 2.5);
+    font-weight: 700;
+    z-index: 11111;
+    text-shadow: -1px -1px 0 #ff6b6b;
+    font-weight: bold;
+    color: #cc0000;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .happy-birthday {
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .happy-birthday {
+        top: 45%;
+    }
+}
+
+@keyframes fadeInEase {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fadeOutBirthday {
+    from {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+}
+

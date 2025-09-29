@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Carattere&family=Limelight&family=Notable&display=swap');
+
+.notable-regular {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.carattere-regular {
+  font-family: "Carattere", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.height {
+  height : 15rem
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  text-align: center;
+}
